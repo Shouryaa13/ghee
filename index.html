@@ -1,0 +1,2286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Kridhav — Slow-churned. Pure gold. | Premium A2 Desi Cow Ghee</title>
+  <meta name="description" content="Kridhav A2 Desi Cow Ghee, bilona-churned in small batches. Slow-churned. Pure gold. Shuddh. Sunehri. Sachha." />
+  <meta name="theme-color" content="#0F1A14" />
+  <meta property="og:title" content="Kridhav — Slow-churned. Pure gold." />
+  <meta property="og:description" content="Premium Indian ghee, bilona method. A2 Desi Cow, Buffalo, Organic Cultured & gift hampers." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="assets/field-jar.jpg" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Manrope:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Product",
+    "name": "Kridhav A2 Desi Cow Ghee",
+    "brand": { "@type": "Brand", "name": "Kridhav" },
+    "description": "Slow-churned bilona A2 Desi Cow Ghee. Pure gold.",
+    "offers": {
+      "@type": "AggregateOffer",
+      "priceCurrency": "INR",
+      "lowPrice": "449",
+      "highPrice": "1499",
+      "availability": "https://schema.org/InStock"
+    }
+  }
+  </script>
+  <style>
+    :root {
+      --ink: #0F1A14;
+      --ink-soft: #1A2A22;
+      --cream: #FBF4E4;
+      --cream-dim: #F3EAD6;
+      --gold: #E8B13A;
+      --gold-deep: #C98A12;
+      --saffron: #F28C28;
+      --muted: #6B7A70;
+      --line: rgba(15, 26, 20, 0.12);
+      --glass: rgba(251, 244, 228, 0.08);
+      --radius: 14px;
+      --font-display: "Cormorant Garamond", Georgia, serif;
+      --font-body: "Manrope", system-ui, sans-serif;
+      --ease: cubic-bezier(0.22, 1, 0.36, 1);
+      --nav-h: 72px;
+      --safe-bottom: env(safe-area-inset-bottom, 0px);
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+      }
+    }
+
+    body {
+      font-family: var(--font-body);
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.55;
+      overflow-x: hidden;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    img { max-width: 100%; display: block; }
+    a { color: inherit; text-decoration: none; }
+    button, input, select, textarea { font: inherit; }
+    button { cursor: pointer; border: none; background: none; color: inherit; }
+    ul { list-style: none; }
+    :focus-visible { outline: 2px solid var(--gold); outline-offset: 3px; }
+
+    .grain {
+      pointer-events: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9998;
+      opacity: 0.045;
+      background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+    }
+
+    .skip-link {
+      position: absolute;
+      left: -999px;
+      top: 0;
+      background: var(--gold);
+      color: var(--ink);
+      padding: 0.75rem 1rem;
+      z-index: 10000;
+    }
+    .skip-link:focus { left: 1rem; top: 1rem; }
+
+    /* Announcement */
+    .announce {
+      background: var(--ink);
+      color: var(--cream);
+      text-align: center;
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      padding: 0.55rem 1rem;
+      font-weight: 500;
+    }
+    .announce span { color: var(--gold); }
+
+    /* Nav */
+    .nav {
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      height: var(--nav-h);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 clamp(1rem, 4vw, 3rem);
+      transition: background 0.4s var(--ease), backdrop-filter 0.4s, border-color 0.4s;
+      border-bottom: 1px solid transparent;
+      color: var(--cream);
+      background: rgba(15, 26, 20, 0.55);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    .nav.scrolled {
+      background: rgba(15, 26, 20, 0.82);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom-color: rgba(251, 244, 228, 0.08);
+    }
+    .nav-logo {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+    }
+    .nav-logo em { font-style: italic; color: var(--gold); font-weight: 400; }
+    .nav-links {
+      display: none;
+      gap: 1.75rem;
+      font-size: 0.88rem;
+      font-weight: 500;
+    }
+    .nav-links a { opacity: 0.85; transition: opacity 0.25s; }
+    .nav-links a:hover { opacity: 1; color: var(--gold); }
+    .nav-actions { display: flex; align-items: center; gap: 0.75rem; }
+    .icon-btn {
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      display: grid;
+      place-items: center;
+      border: 1px solid rgba(251, 244, 228, 0.2);
+      transition: background 0.25s, border-color 0.25s;
+      position: relative;
+    }
+    .icon-btn:hover { background: var(--glass); border-color: var(--gold); }
+    .cart-count {
+      position: absolute;
+      top: -4px;
+      right: -4px;
+      min-width: 18px;
+      height: 18px;
+      border-radius: 99px;
+      background: var(--gold);
+      color: var(--ink);
+      font-size: 0.65rem;
+      font-weight: 700;
+      place-items: center;
+      padding: 0 4px;
+      display: none;
+    }
+    .cart-count.is-on { display: grid; }
+    .menu-toggle { display: grid; }
+    @media (min-width: 900px) {
+      .nav-links { display: flex; }
+      .menu-toggle { display: none; }
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 999;
+      background: rgba(15, 26, 20, 0.96);
+      padding: 6rem 1.5rem 2rem;
+      flex-direction: column;
+      gap: 1.25rem;
+    }
+    .mobile-menu.open { display: flex; }
+    .mobile-menu a {
+      color: var(--cream);
+      font-family: var(--font-display);
+      font-size: 2rem;
+    }
+
+    /* Buttons */
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      padding: 0.95rem 1.6rem;
+      border-radius: 999px;
+      font-weight: 600;
+      font-size: 0.92rem;
+      letter-spacing: 0.02em;
+      transition: transform 0.35s var(--ease), background 0.25s, color 0.25s, box-shadow 0.35s;
+    }
+    .btn-gold {
+      background: linear-gradient(135deg, var(--gold), var(--gold-deep));
+      color: var(--ink);
+      box-shadow: 0 10px 30px rgba(232, 177, 58, 0.28);
+    }
+    .btn-gold:hover { transform: translateY(-2px); box-shadow: 0 14px 36px rgba(232, 177, 58, 0.4); }
+    .btn-ghost {
+      border: 1px solid rgba(251, 244, 228, 0.35);
+      color: var(--cream);
+    }
+    .btn-ghost:hover { border-color: var(--gold); color: var(--gold); }
+    .btn-ink {
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .btn-ink:hover { background: var(--ink-soft); transform: translateY(-2px); }
+    .btn-outline {
+      border: 1px solid var(--ink);
+      color: var(--ink);
+    }
+    .btn-outline:hover { background: var(--ink); color: var(--cream); }
+    .magnetic { display: inline-flex; }
+
+    /* Hero */
+    .hero {
+      position: relative;
+      min-height: calc(100vh - 40px);
+      min-height: calc(100dvh - 40px);
+      background: var(--ink);
+      color: var(--cream);
+      overflow: hidden;
+      display: grid;
+      align-items: end;
+      padding: 0 clamp(1rem, 4vw, 3rem) clamp(5.5rem, 10vw, 4.5rem);
+    }
+    @media (min-width: 900px) {
+      .hero { padding-bottom: clamp(2.5rem, 6vw, 4.5rem); }
+    }
+    .hero-bg {
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(105deg, rgba(15, 26, 20, 0.92) 0%, rgba(15, 26, 20, 0.55) 45%, rgba(15, 26, 20, 0.35) 100%),
+        url("assets/field-jar.jpg") center / cover no-repeat;
+    }
+    .hero-flare {
+      position: absolute;
+      width: 55vw;
+      height: 55vw;
+      right: -10%;
+      top: 10%;
+      background: radial-gradient(circle, rgba(232, 177, 58, 0.28), transparent 70%);
+      filter: blur(20px);
+      pointer-events: none;
+    }
+    .pour-wrap {
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      overflow: hidden;
+    }
+    .pour-svg {
+      position: absolute;
+      right: clamp(-5%, 8vw, 18%);
+      top: -5%;
+      width: min(420px, 55vw);
+      height: 110%;
+      opacity: 0.9;
+    }
+    .particles {
+      position: absolute;
+      inset: 0;
+      overflow: hidden;
+      pointer-events: none;
+    }
+    .particle {
+      position: absolute;
+      width: 3px;
+      height: 3px;
+      border-radius: 50%;
+      background: rgba(232, 177, 58, 0.55);
+      animation: floatDust linear infinite;
+    }
+    @keyframes floatDust {
+      0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+      10% { opacity: 1; }
+      90% { opacity: 0.6; }
+      100% { transform: translateY(-10vh) translateX(40px); opacity: 0; }
+    }
+    .hero-content {
+      position: relative;
+      z-index: 2;
+      max-width: 720px;
+      padding-bottom: 1rem;
+    }
+    .hero-brand {
+      font-family: var(--font-display);
+      font-size: clamp(3.2rem, 11vw, 7.5rem);
+      line-height: 0.9;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.65rem;
+    }
+    .hero-brand span {
+      display: block;
+      font-size: 0.28em;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      font-family: var(--font-body);
+      font-weight: 500;
+      color: var(--gold);
+      margin-bottom: 0.6rem;
+    }
+    .hero-headline {
+      font-family: var(--font-display);
+      font-size: clamp(1.6rem, 4vw, 2.6rem);
+      font-weight: 500;
+      font-style: italic;
+      line-height: 1.2;
+      margin-bottom: 0.85rem;
+      max-width: 16ch;
+    }
+    .hero-headline .word {
+      display: inline-block;
+      opacity: 0;
+      transform: translateY(18px);
+    }
+    .hero-sub {
+      font-size: clamp(0.9rem, 2vw, 1.1rem);
+      opacity: 0.82;
+      max-width: 36ch;
+      margin-bottom: 1.25rem;
+      font-weight: 400;
+    }
+    @media (max-height: 720px) {
+      .hero-brand { font-size: clamp(2.6rem, 10vw, 5rem); }
+      .hero-headline { font-size: clamp(1.35rem, 3.5vw, 2rem); }
+      .hero-sub { display: none; }
+    }
+    .hero-cta { display: flex; flex-wrap: wrap; gap: 0.85rem; align-items: center; }
+    .hero-hindi {
+      margin-top: 1.5rem;
+      font-size: 0.85rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: rgba(251, 244, 228, 0.55);
+    }
+
+    /* Trust */
+    .trust {
+      background: var(--ink-soft);
+      color: var(--cream);
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1px;
+      border-top: 1px solid rgba(251, 244, 228, 0.08);
+    }
+    @media (min-width: 768px) { .trust { grid-template-columns: repeat(4, 1fr); } }
+    .trust-item {
+      padding: 1.35rem 1rem;
+      text-align: center;
+      background: var(--ink);
+      display: grid;
+      gap: 0.45rem;
+      justify-items: center;
+    }
+    .trust-item svg { width: 28px; height: 28px; color: var(--gold); }
+    .trust-item strong {
+      font-size: 0.82rem;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      font-weight: 600;
+    }
+    .trust-item span { font-size: 0.78rem; opacity: 0.65; }
+
+    /* Sections common */
+    section { position: relative; }
+    .section {
+      padding: clamp(3.5rem, 8vw, 7rem) clamp(1rem, 4vw, 3rem);
+    }
+    .section-dark { background: var(--ink); color: var(--cream); }
+    .section-cream { background: var(--cream); color: var(--ink); }
+    .section-soft { background: var(--cream-dim); }
+    .eyebrow {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold-deep);
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
+    .section-dark .eyebrow { color: var(--gold); }
+    .section-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.2rem, 5.5vw, 4rem);
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -0.02em;
+      margin-bottom: 0.85rem;
+      max-width: 16ch;
+    }
+    .section-lead {
+      font-size: 1.05rem;
+      color: var(--muted);
+      max-width: 42ch;
+      margin-bottom: 2.5rem;
+    }
+    .section-dark .section-lead { color: rgba(251, 244, 228, 0.7); }
+    .section-head { margin-bottom: 2.5rem; }
+
+    /* Scroll story */
+    .story {
+      background: var(--ink);
+      color: var(--cream);
+      min-height: 100vh;
+    }
+    .story-pin {
+      display: grid;
+      gap: 2rem;
+      align-items: center;
+      min-height: 100vh;
+      padding: clamp(2rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem);
+    }
+    @media (min-width: 900px) {
+      .story-pin { grid-template-columns: 1fr 1fr; gap: 4rem; }
+    }
+    .story-visual {
+      position: relative;
+      aspect-ratio: 4/5;
+      border-radius: 20px;
+      overflow: hidden;
+      background: var(--ink-soft);
+      max-height: 70vh;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 460px;
+    }
+    .story-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0;
+      transition: opacity 0.6s var(--ease);
+    }
+    .story-visual img.active { opacity: 1; }
+    .story-svg-stage {
+      position: absolute;
+      inset: 0;
+      display: grid;
+      place-items: center;
+      background: linear-gradient(160deg, #1A2A22, #0F1A14);
+      z-index: 1;
+    }
+    .story-svg-stage.hide { opacity: 0; pointer-events: none; }
+    .story-step-svg { width: min(220px, 55%); opacity: 0; transform: scale(0.9); transition: opacity 0.5s, transform 0.5s var(--ease); }
+    .story-step-svg.active { opacity: 1; transform: scale(1); }
+    .story-copy { max-width: 420px; }
+    .story-steps { display: grid; gap: 0.65rem; margin-top: 1.5rem; }
+    .story-step {
+      padding: 0.85rem 1rem;
+      border-left: 2px solid rgba(251, 244, 228, 0.15);
+      opacity: 0.35;
+      transition: opacity 0.4s, border-color 0.4s, background 0.4s;
+    }
+    .story-step.active {
+      opacity: 1;
+      border-color: var(--gold);
+      background: rgba(232, 177, 58, 0.06);
+    }
+    .story-step strong {
+      display: block;
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+    }
+    .story-step p { font-size: 0.9rem; opacity: 0.75; }
+
+    /* Products */
+    .products-grid {
+      display: grid;
+      gap: 1.5rem;
+      grid-template-columns: 1fr;
+    }
+    @media (min-width: 700px) {
+      .products-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .product-card {
+      background: rgba(255, 255, 255, 0.45);
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      padding: 1.25rem;
+      backdrop-filter: blur(12px);
+      transform-style: preserve-3d;
+      transition: box-shadow 0.35s;
+      will-change: transform;
+    }
+    .product-card:hover { box-shadow: 0 24px 50px rgba(15, 26, 20, 0.12); }
+    .product-media {
+      aspect-ratio: 1;
+      border-radius: 14px;
+      overflow: hidden;
+      background: linear-gradient(160deg, #1A2A22, #0F1A14);
+      margin-bottom: 1.1rem;
+      position: relative;
+      display: grid;
+      place-items: center;
+    }
+    .product-media img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      opacity: 0.92;
+    }
+    .product-media .jar-svg {
+      width: 55%;
+      filter: drop-shadow(0 12px 24px rgba(0,0,0,0.35));
+    }
+    .product-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      font-weight: 600;
+      margin-bottom: 0.35rem;
+    }
+    .product-card .desc {
+      font-size: 0.88rem;
+      color: var(--muted);
+      margin-bottom: 1rem;
+      min-height: 2.8em;
+    }
+    .size-row {
+      display: flex;
+      gap: 0.4rem;
+      margin-bottom: 1rem;
+      flex-wrap: wrap;
+    }
+    .size-btn {
+      padding: 0.4rem 0.75rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+      font-size: 0.78rem;
+      font-weight: 600;
+      transition: background 0.25s, border-color 0.25s, color 0.25s;
+    }
+    .size-btn.active {
+      background: var(--ink);
+      color: var(--cream);
+      border-color: var(--ink);
+    }
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1rem;
+    }
+    .price {
+      font-family: var(--font-display);
+      font-size: 1.85rem;
+      font-weight: 600;
+    }
+    .price small {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      color: var(--muted);
+      font-weight: 500;
+      margin-left: 0.35rem;
+    }
+    .product-actions { display: flex; gap: 0.5rem; flex-wrap: wrap; }
+    .product-actions .btn { flex: 1; min-width: 120px; padding: 0.8rem 1rem; font-size: 0.85rem; }
+
+    /* Purity */
+    .purity-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 800px) {
+      .purity-grid { grid-template-columns: 1.1fr 0.9fr; align-items: stretch; }
+    }
+    .counters {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    .counter {
+      padding: 1.4rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.5);
+      border: 1px solid var(--line);
+    }
+    .counter .num {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3rem);
+      font-weight: 600;
+      color: var(--gold-deep);
+      line-height: 1;
+    }
+    .counter .label { font-size: 0.85rem; color: var(--muted); margin-top: 0.4rem; }
+    .lab-card {
+      background: #fff;
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.5rem;
+      font-family: var(--font-body);
+      box-shadow: 0 20px 40px rgba(15, 26, 20, 0.06);
+    }
+    .lab-card h3 {
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+      border-bottom: 1px dashed var(--line);
+      padding-bottom: 0.75rem;
+    }
+    .lab-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(15,26,20,0.06);
+      font-size: 0.88rem;
+    }
+    .lab-row span:last-child { color: var(--muted); text-align: right; }
+    .lab-note {
+      margin-top: 1rem;
+      font-size: 0.78rem;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    /* Golden Test */
+    .test-widget {
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 24px;
+      padding: clamp(1.5rem, 4vw, 2.5rem);
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 800px) {
+      .test-widget { grid-template-columns: 1fr 1fr; align-items: center; }
+    }
+    .test-visual {
+      aspect-ratio: 1;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      background: #1A2A22;
+    }
+    .test-visual img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.4s, filter 0.4s;
+    }
+    .test-visual .adulterated {
+      filter: saturate(0.35) brightness(1.15) contrast(0.9);
+      opacity: 0;
+    }
+    .test-cues { display: grid; gap: 1rem; }
+    .cue {
+      padding: 0.9rem 0;
+      border-bottom: 1px solid rgba(251,244,228,0.1);
+    }
+    .cue strong { display: block; margin-bottom: 0.25rem; font-size: 0.95rem; }
+    .cue p { font-size: 0.85rem; opacity: 0.7; }
+    .slider-wrap { margin-top: 0.5rem; }
+    .slider-wrap label {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.75rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 0.6rem;
+      opacity: 0.7;
+    }
+    input[type="range"] {
+      -webkit-appearance: none;
+      appearance: none;
+      width: 100%;
+      height: 6px;
+      border-radius: 99px;
+      background: linear-gradient(90deg, var(--gold), rgba(251,244,228,0.25));
+      outline: none;
+    }
+    input[type="range"]::-webkit-slider-thumb {
+      -webkit-appearance: none;
+      width: 22px;
+      height: 22px;
+      border-radius: 50%;
+      background: var(--cream);
+      border: 3px solid var(--gold);
+      cursor: grab;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.3);
+    }
+
+    /* Gifting */
+    .gift-builder {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 900px) {
+      .gift-builder { grid-template-columns: 1.2fr 0.8fr; }
+    }
+    .gift-options { display: grid; gap: 1.25rem; }
+    .option-group h4 {
+      font-family: var(--font-display);
+      font-size: 1.35rem;
+      margin-bottom: 0.75rem;
+    }
+    .chip-row { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .chip {
+      padding: 0.65rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: rgba(255,255,255,0.4);
+      font-size: 0.85rem;
+      font-weight: 500;
+      transition: border-color 0.25s, background 0.25s, color 0.25s;
+    }
+    .chip.active {
+      border-color: var(--ink);
+      background: var(--ink);
+      color: var(--cream);
+    }
+    .gift-summary {
+      background: var(--ink);
+      color: var(--cream);
+      border-radius: 20px;
+      padding: 1.75rem;
+      position: sticky;
+      top: calc(var(--nav-h) + 1rem);
+      align-self: start;
+    }
+    .gift-summary h3 {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      margin-bottom: 1rem;
+    }
+    .gift-summary .line {
+      display: flex;
+      justify-content: space-between;
+      padding: 0.55rem 0;
+      border-bottom: 1px solid rgba(251,244,228,0.1);
+      font-size: 0.9rem;
+    }
+    .gift-total {
+      margin-top: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: baseline;
+      font-family: var(--font-display);
+      font-size: 2rem;
+    }
+    .gift-preview {
+      margin: 1.25rem 0;
+      aspect-ratio: 16/10;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+    .gift-preview img { width: 100%; height: 100%; object-fit: cover; }
+
+    /* Recipes */
+    .recipe-rail {
+      display: flex;
+      gap: 1rem;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      padding-bottom: 1rem;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: thin;
+    }
+    .recipe-card {
+      flex: 0 0 min(280px, 80vw);
+      scroll-snap-align: start;
+      border-radius: 18px;
+      overflow: hidden;
+      position: relative;
+      aspect-ratio: 3/4;
+      background: var(--ink);
+    }
+    .recipe-card img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 0.6s var(--ease);
+    }
+    .recipe-card:hover img { transform: scale(1.06); }
+    .recipe-meta {
+      position: absolute;
+      inset: auto 0 0 0;
+      padding: 1.25rem;
+      background: linear-gradient(transparent, rgba(15,26,20,0.92));
+      color: var(--cream);
+      transform: translateY(28%);
+      transition: transform 0.45s var(--ease);
+    }
+    .recipe-card:hover .recipe-meta,
+    .recipe-card:focus-within .recipe-meta { transform: translateY(0); }
+    .recipe-meta h3 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+      margin-bottom: 0.35rem;
+    }
+    .recipe-meta p {
+      font-size: 0.85rem;
+      opacity: 0;
+      transition: opacity 0.35s;
+    }
+    .recipe-card:hover .recipe-meta p,
+    .recipe-card:focus-within .recipe-meta p { opacity: 0.85; }
+
+    /* Subscription */
+    .sub-banner {
+      display: grid;
+      gap: 1.5rem;
+      align-items: center;
+      background: linear-gradient(135deg, var(--ink) 0%, #1F3328 100%);
+      color: var(--cream);
+      border-radius: 24px;
+      padding: clamp(1.75rem, 4vw, 3rem);
+      overflow: hidden;
+      position: relative;
+    }
+    @media (min-width: 800px) {
+      .sub-banner { grid-template-columns: 1.2fr 0.8fr; }
+    }
+    .sub-banner::after {
+      content: "";
+      position: absolute;
+      right: -10%;
+      top: -20%;
+      width: 40%;
+      height: 80%;
+      background: radial-gradient(circle, rgba(232,177,58,0.25), transparent 70%);
+      pointer-events: none;
+    }
+    .sub-banner h2 {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      line-height: 1.05;
+      margin-bottom: 0.75rem;
+    }
+    .sub-form { display: flex; flex-wrap: wrap; gap: 0.6rem; margin-top: 1.25rem; }
+    .sub-form select, .sub-form input {
+      padding: 0.85rem 1rem;
+      border-radius: 999px;
+      border: 1px solid rgba(251,244,228,0.2);
+      background: rgba(251,244,228,0.06);
+      color: var(--cream);
+      min-width: 140px;
+    }
+    .sub-form select option { color: var(--ink); }
+
+    /* Testimonials */
+    .marquee-wrap {
+      overflow: hidden;
+      mask-image: linear-gradient(90deg, transparent, #000 8%, #000 92%, transparent);
+    }
+    .marquee-track {
+      display: flex;
+      gap: 1rem;
+      width: max-content;
+      animation: marquee 45s linear infinite;
+    }
+    .marquee-track:hover { animation-play-state: paused; }
+    @keyframes marquee {
+      from { transform: translateX(0); }
+      to { transform: translateX(-50%); }
+    }
+    .review-card {
+      width: min(340px, 80vw);
+      padding: 1.5rem;
+      border-radius: 16px;
+      background: rgba(255,255,255,0.55);
+      border: 1px solid var(--line);
+      flex-shrink: 0;
+    }
+    .stars { color: var(--gold-deep); letter-spacing: 0.1em; margin-bottom: 0.75rem; font-size: 0.85rem; }
+    .review-card p {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      font-style: italic;
+      line-height: 1.35;
+      margin-bottom: 1rem;
+    }
+    .review-card cite {
+      font-style: normal;
+      font-size: 0.82rem;
+      color: var(--muted);
+      font-weight: 600;
+    }
+
+    /* FAQ */
+    .faq-list { max-width: 720px; }
+    .faq-item {
+      border-bottom: 1px solid var(--line);
+    }
+    .faq-q {
+      width: 100%;
+      text-align: left;
+      padding: 1.15rem 0;
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      align-items: center;
+      font-weight: 600;
+      font-size: 1rem;
+    }
+    .faq-q svg { transition: transform 0.3s; flex-shrink: 0; }
+    .faq-item.open .faq-q svg { transform: rotate(45deg); }
+    .faq-a {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.4s var(--ease), padding 0.3s;
+      color: var(--muted);
+      font-size: 0.95rem;
+    }
+    .faq-item.open .faq-a {
+      max-height: 240px;
+      padding-bottom: 1.15rem;
+    }
+
+    /* Wholesale */
+    .wholesale-grid {
+      display: grid;
+      gap: 2rem;
+    }
+    @media (min-width: 800px) {
+      .wholesale-grid { grid-template-columns: 1fr 1fr; }
+    }
+    .form-grid { display: grid; gap: 0.85rem; }
+    .form-grid label { display: grid; gap: 0.35rem; font-size: 0.82rem; font-weight: 600; }
+    .form-grid input, .form-grid select, .form-grid textarea {
+      padding: 0.85rem 1rem;
+      border-radius: 12px;
+      border: 1px solid var(--line);
+      background: #fff;
+      color: var(--ink);
+    }
+    .form-grid textarea { min-height: 110px; resize: vertical; }
+    .form-msg {
+      display: none;
+      margin-top: 0.75rem;
+      padding: 0.75rem 1rem;
+      border-radius: 10px;
+      background: rgba(232,177,58,0.15);
+      color: var(--ink);
+      font-size: 0.9rem;
+    }
+    .form-msg.show { display: block; }
+
+    /* Footer */
+    footer {
+      background: var(--ink);
+      color: var(--cream);
+      padding: clamp(3rem, 6vw, 5rem) clamp(1rem, 4vw, 3rem) 7rem;
+    }
+    .footer-grid {
+      display: grid;
+      gap: 2rem;
+      margin-bottom: 2.5rem;
+    }
+    @media (min-width: 800px) {
+      .footer-grid { grid-template-columns: 1.4fr 1fr 1fr 1fr; }
+    }
+    .footer-brand {
+      font-family: var(--font-display);
+      font-size: 2.4rem;
+      margin-bottom: 0.5rem;
+    }
+    .footer-brand em { color: var(--gold); font-style: italic; }
+    footer p { font-size: 0.9rem; opacity: 0.7; max-width: 28ch; }
+    footer h4 {
+      font-size: 0.75rem;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      margin-bottom: 1rem;
+      color: var(--gold);
+    }
+    footer ul { display: grid; gap: 0.55rem; }
+    footer a { opacity: 0.75; font-size: 0.9rem; transition: opacity 0.25s, color 0.25s; }
+    footer a:hover { opacity: 1; color: var(--gold); }
+    .pay-icons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .pay-icons span {
+      padding: 0.35rem 0.65rem;
+      border: 1px solid rgba(251,244,228,0.2);
+      border-radius: 6px;
+      font-size: 0.7rem;
+      letter-spacing: 0.04em;
+      opacity: 0.8;
+    }
+    .footer-bottom {
+      border-top: 1px solid rgba(251,244,228,0.1);
+      padding-top: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: space-between;
+      font-size: 0.8rem;
+      opacity: 0.55;
+    }
+
+    /* Cart drawer */
+    .cart-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15,26,20,0.45);
+      z-index: 2000;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 0.35s;
+    }
+    .cart-overlay.open { opacity: 1; pointer-events: auto; }
+    .cart-drawer {
+      position: fixed;
+      top: 0;
+      right: 0;
+      height: 100%;
+      width: min(400px, 100%);
+      background: var(--cream);
+      z-index: 2001;
+      transform: translateX(100%);
+      transition: transform 0.45s var(--ease);
+      display: flex;
+      flex-direction: column;
+      box-shadow: -20px 0 50px rgba(0,0,0,0.2);
+    }
+    .cart-drawer.open { transform: translateX(0); }
+    .cart-head {
+      padding: 1.25rem 1.25rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid var(--line);
+    }
+    .cart-head h2 {
+      font-family: var(--font-display);
+      font-size: 1.6rem;
+    }
+    .cart-body {
+      flex: 1;
+      overflow-y: auto;
+      padding: 1.25rem;
+    }
+    .cart-empty {
+      text-align: center;
+      padding: 3rem 1rem;
+      color: var(--muted);
+    }
+    .cart-item {
+      display: grid;
+      grid-template-columns: 64px 1fr auto;
+      gap: 0.85rem;
+      padding: 0.85rem 0;
+      border-bottom: 1px solid var(--line);
+      align-items: center;
+    }
+    .cart-thumb {
+      width: 64px;
+      height: 64px;
+      border-radius: 10px;
+      background: var(--ink);
+      overflow: hidden;
+    }
+    .cart-thumb img { width: 100%; height: 100%; object-fit: cover; }
+    .cart-item h4 { font-size: 0.92rem; margin-bottom: 0.15rem; }
+    .cart-item .meta { font-size: 0.78rem; color: var(--muted); }
+    .qty-ctrl {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-top: 0.4rem;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 0.15rem 0.35rem;
+    }
+    .qty-ctrl button {
+      width: 26px;
+      height: 26px;
+      border-radius: 50%;
+      font-weight: 700;
+    }
+    .cart-item-price { font-weight: 600; font-size: 0.95rem; }
+    .cart-foot {
+      padding: 1.25rem;
+      border-top: 1px solid var(--line);
+      display: grid;
+      gap: 0.85rem;
+    }
+    .ship-bar {
+      background: rgba(15,26,20,0.06);
+      border-radius: 99px;
+      height: 8px;
+      overflow: hidden;
+    }
+    .ship-bar span {
+      display: block;
+      height: 100%;
+      background: linear-gradient(90deg, var(--gold), var(--gold-deep));
+      width: 0%;
+      transition: width 0.4s var(--ease);
+    }
+    .ship-note { font-size: 0.78rem; color: var(--muted); }
+    .subtotal-row {
+      display: flex;
+      justify-content: space-between;
+      font-family: var(--font-display);
+      font-size: 1.5rem;
+      font-weight: 600;
+    }
+    .pincode-row {
+      display: flex;
+      gap: 0.5rem;
+    }
+    .pincode-row input {
+      flex: 1;
+      padding: 0.7rem 0.9rem;
+      border-radius: 999px;
+      border: 1px solid var(--line);
+    }
+    .pincode-msg { font-size: 0.78rem; min-height: 1.2em; }
+    .pincode-msg.ok { color: #2d6a4f; }
+    .pincode-msg.bad { color: #9b2226; }
+
+    /* Mobile sticky bar */
+    .mobile-bar {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      z-index: 1500;
+      display: flex;
+      gap: 0.5rem;
+      padding: 0.75rem 1rem calc(0.75rem + var(--safe-bottom));
+      background: rgba(15, 26, 20, 0.92);
+      backdrop-filter: blur(12px);
+      border-top: 1px solid rgba(251,244,228,0.1);
+    }
+    .mobile-bar .btn { flex: 1; }
+    @media (min-width: 900px) { .mobile-bar { display: none; } }
+
+    /* Flying jar */
+    .fly-jar {
+      position: fixed;
+      z-index: 3000;
+      pointer-events: none;
+      width: 48px;
+      height: 48px;
+      transition: transform 0.7s var(--ease), opacity 0.7s;
+      opacity: 1;
+    }
+
+    .sr-only {
+      position: absolute;
+      width: 1px;
+      height: 1px;
+      padding: 0;
+      margin: -1px;
+      overflow: hidden;
+      clip: rect(0,0,0,0);
+      border: 0;
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="grain" aria-hidden="true"></div>
+
+  <div class="announce" role="status">
+    Free shipping on orders <span>above ₹999</span> · Pan-India delivery · COD available
+  </div>
+
+  <header class="nav" id="nav">
+    <a href="#top" class="nav-logo" aria-label="Kridhav home">Kridhav <em>गhee</em></a>
+    <nav class="nav-links" aria-label="Primary">
+      <a href="#story">Our Method</a>
+      <a href="#shop">Shop</a>
+      <a href="#purity">Purity</a>
+      <a href="#gifting">Gifting</a>
+      <a href="#wholesale">Wholesale</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="icon-btn" href="https://wa.me/919999999999?text=Hi%20Kridhav%2C%20I%27d%20like%20to%20order%20ghee." target="_blank" rel="noopener" aria-label="Order on WhatsApp">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M20.5 3.5A11 11 0 0 0 2.4 17.7L1.5 22.5l4.9-.9A11 11 0 1 0 20.5 3.5zm-8.5 17a9 9 0 0 1-4.6-1.3l-.3-.2-2.9.5.5-2.8-.2-.3a9 9 0 1 1 7.5 4.1zm5-6.7c-.3-.1-1.6-.8-1.9-.9s-.4-.1-.6.1-.7.9-.8 1-.3.2-.6.1a7.4 7.4 0 0 1-2.2-1.4 8.2 8.2 0 0 1-1.5-1.9c-.2-.3 0-.4.1-.6l.4-.5.1-.3a.5.5 0 0 0 0-.5l-.9-2.1c-.2-.6-.5-.5-.7-.5h-.6a1.1 1.1 0 0 0-.8.4 3.4 3.4 0 0 0-1 2.5 5.9 5.9 0 0 0 1.2 3.1 13.4 13.4 0 0 0 5.1 4.6c.7.3 1.2.5 1.6.6a3.9 3.9 0 0 0 1.8.1 2.9 2.9 0 0 0 1.9-1.3 2.4 2.4 0 0 0 .2-1.3c-.1-.1-.3-.2-.6-.3z"/></svg>
+      </a>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart" aria-controls="cartDrawer" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" aria-hidden="true"><path d="M6 6h15l-1.5 9h-12z"/><circle cx="9" cy="20" r="1.2"/><circle cx="18" cy="20" r="1.2"/><path d="M6 6 5 3H2"/></svg>
+        <span class="cart-count" id="cartCount">0</span>
+      </button>
+      <button class="icon-btn menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+    </div>
+  </header>
+
+  <div class="mobile-menu" id="mobileMenu" hidden>
+    <a href="#story">Our Method</a>
+    <a href="#shop">Shop</a>
+    <a href="#purity">Purity</a>
+    <a href="#golden-test">Golden Test</a>
+    <a href="#gifting">Gifting</a>
+    <a href="#recipes">Recipes</a>
+    <a href="#wholesale">Wholesale</a>
+  </div>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="hero" id="top" aria-label="Kridhav hero">
+      <div class="hero-bg" role="img" aria-label="Jar of golden ghee in a sunlit pasture"></div>
+      <div class="hero-flare" aria-hidden="true"></div>
+      <div class="particles" id="particles" aria-hidden="true"></div>
+      <div class="pour-wrap" aria-hidden="true">
+        <svg class="pour-svg" viewBox="0 0 200 600" fill="none">
+          <defs>
+            <linearGradient id="gheeGrad" x1="0" y1="0" x2="0" y2="1">
+              <stop offset="0%" stop-color="#F8E08A"/>
+              <stop offset="40%" stop-color="#E8B13A"/>
+              <stop offset="100%" stop-color="#C98A12"/>
+            </linearGradient>
+            <linearGradient id="glassGrad" x1="0" y1="0" x2="1" y2="0">
+              <stop offset="0%" stop-color="#fff" stop-opacity="0.15"/>
+              <stop offset="50%" stop-color="#fff" stop-opacity="0.05"/>
+              <stop offset="100%" stop-color="#fff" stop-opacity="0.2"/>
+            </linearGradient>
+            <filter id="softGlow" x="-50%" y="-20%" width="200%" height="140%">
+              <feGaussianBlur stdDeviation="4" result="b"/>
+              <feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge>
+            </filter>
+          </defs>
+          <path id="pourStream" d="M95 0 C100 40 88 80 98 120 C108 160 90 200 100 250 C110 300 92 340 100 390" stroke="url(#gheeGrad)" stroke-width="14" stroke-linecap="round" opacity="0.85" filter="url(#softGlow)" stroke-dasharray="420" stroke-dashoffset="420"/>
+          <ellipse cx="100" cy="455" rx="48" ry="10" fill="#C98A12" opacity="0.35"/>
+          <path d="M55 400 Q55 520 100 540 Q145 520 145 400 Z" fill="url(#glassGrad)" stroke="rgba(251,244,228,0.35)" stroke-width="2"/>
+          <clipPath id="jarClip"><path d="M62 405 Q62 510 100 528 Q138 510 138 405 Z"/></clipPath>
+          <rect id="jarFill" x="62" y="528" width="76" height="0" fill="url(#gheeGrad)" clip-path="url(#jarClip)" opacity="0.92"/>
+          <rect x="70" y="388" width="60" height="14" rx="3" fill="#C98A12"/>
+          <rect x="74" y="384" width="52" height="6" rx="2" fill="#E8B13A"/>
+        </svg>
+      </div>
+      <div class="hero-content">
+        <h1 class="hero-brand"><span>Est. for the modern Indian kitchen</span>Kridhav</h1>
+        <p class="hero-headline" id="heroHeadline">
+          <span class="word">Slow-churned.</span>
+          <span class="word">Pure</span>
+          <span class="word">gold.</span>
+        </p>
+        <p class="hero-sub">Bilona A2 Desi Cow Ghee — small-batch, wood-fire simmered, poured into glass. Heritage, without the noise.</p>
+        <div class="hero-cta">
+          <div class="magnetic">
+            <a class="btn btn-gold" href="#shop" id="magneticCta">Taste the Gold</a>
+          </div>
+          <a class="btn btn-ghost" href="#story">From Pasture to Jar</a>
+        </div>
+        <p class="hero-hindi">Shuddh. Sunehri. Sachha.</p>
+      </div>
+    </section>
+
+    <!-- TRUST -->
+    <div class="trust" role="list">
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><circle cx="12" cy="12" r="9"/><path d="M8 12h8M12 8v8"/></svg>
+        <strong>Bilona Method</strong>
+        <span>Hand-churned curd</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3 4 7v5c0 5 3.5 8.5 8 9 4.5-.5 8-4 8-9V7l-8-4z"/></svg>
+        <strong>No Preservatives</strong>
+        <span>Nothing to hide</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="7" y="6" width="10" height="14" rx="2"/><path d="M9 6V4h6v2"/></svg>
+        <strong>Glass Jar</strong>
+        <span>Light-safe packing</span>
+      </div>
+      <div class="trust-item" role="listitem">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M4 16c2-4 4-6 8-6s6 2 8 6"/><circle cx="12" cy="9" r="2"/></svg>
+        <strong>Made in India</strong>
+        <span>Farm communities</span>
+      </div>
+    </div>
+
+    <!-- SCROLL STORY -->
+    <section class="story section-dark" id="story" aria-labelledby="storyTitle">
+      <div class="story-pin" id="storyPin">
+        <div class="story-visual" id="storyVisual">
+          <div class="story-svg-stage" id="storySvgStage">
+            <!-- Step SVGs -->
+            <svg class="story-step-svg active" data-step="0" viewBox="0 0 200 200" aria-hidden="true">
+              <ellipse cx="100" cy="150" rx="70" ry="18" fill="#1F3328"/>
+              <path d="M40 140 Q70 60 100 80 Q130 60 160 140" fill="#2D4A38"/>
+              <circle cx="70" cy="100" r="14" fill="#FBF4E4"/><circle cx="70" cy="100" r="6" fill="#0F1A14"/>
+              <circle cx="130" cy="105" r="16" fill="#FBF4E4"/><circle cx="130" cy="105" r="7" fill="#0F1A14"/>
+              <path d="M55 120 Q70 135 85 120" stroke="#E8B13A" fill="none"/>
+            </svg>
+            <svg class="story-step-svg" data-step="1" viewBox="0 0 200 200" aria-hidden="true">
+              <rect x="70" y="40" width="60" height="100" rx="8" fill="none" stroke="#E8B13A" stroke-width="3"/>
+              <rect x="74" y="70" width="52" height="66" fill="url(#milkGrad)" opacity="0.9"/>
+              <defs><linearGradient id="milkGrad" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#FBF4E4"/><stop offset="1" stop-color="#F0E0B8"/></linearGradient></defs>
+              <ellipse cx="100" cy="70" rx="26" ry="6" fill="#fff" opacity="0.5"/>
+              <path d="M85 150h30v10H85z" fill="#C98A12"/>
+            </svg>
+            <svg class="story-step-svg" data-step="2" viewBox="0 0 200 200" aria-hidden="true">
+              <ellipse cx="100" cy="120" rx="55" ry="40" fill="#F5E6C8"/>
+              <ellipse cx="100" cy="110" rx="45" ry="28" fill="#FBF4E4"/>
+              <circle cx="80" cy="105" r="4" fill="#E8B13A" opacity="0.5"/>
+              <circle cx="110" cy="115" r="3" fill="#E8B13A" opacity="0.4"/>
+              <path d="M60 90 Q100 70 140 90" stroke="#C98A12" fill="none" stroke-width="2"/>
+            </svg>
+            <svg class="story-step-svg" data-step="3" viewBox="0 0 200 200" aria-hidden="true">
+              <ellipse cx="100" cy="130" rx="50" ry="25" fill="#2A3D32"/>
+              <path d="M70 120 Q100 40 130 120" stroke="#C98A12" stroke-width="6" fill="none" stroke-linecap="round"/>
+              <circle cx="100" cy="55" r="10" fill="#E8B13A"/>
+              <ellipse cx="100" cy="125" rx="30" ry="12" fill="#FBF4E4" opacity="0.85"/>
+            </svg>
+            <svg class="story-step-svg" data-step="4" viewBox="0 0 200 200" aria-hidden="true">
+              <ellipse cx="100" cy="150" rx="55" ry="14" fill="#1F3328"/>
+              <path d="M55 140h90l-8-50H63z" fill="#3D2914"/>
+              <ellipse cx="100" cy="90" rx="35" ry="12" fill="#E8B13A"/>
+              <path d="M75 90 Q100 60 125 90" fill="#F28C28" opacity="0.7"/>
+              <path d="M90 50 Q100 30 110 50" stroke="#F28C28" stroke-width="3" fill="none"/>
+            </svg>
+            <svg class="story-step-svg" data-step="5" viewBox="0 0 200 200" aria-hidden="true">
+              <rect x="65" y="50" width="70" height="100" rx="10" fill="none" stroke="rgba(251,244,228,0.4)" stroke-width="3"/>
+              <rect x="72" y="80" width="56" height="64" fill="#E8B13A"/>
+              <rect x="75" y="42" width="50" height="12" rx="2" fill="#C98A12"/>
+              <ellipse cx="100" cy="80" rx="28" ry="5" fill="#F8E08A" opacity="0.6"/>
+            </svg>
+          </div>
+          <img src="assets/pasture-pitcher.jpg" alt="Cows grazing behind golden ghee in glassware" data-step="0" loading="lazy" />
+          <img src="assets/lifestyle-kitchen.jpg" alt="Fresh ghee jar in a bright kitchen" data-step="1" loading="lazy" />
+          <img src="assets/spoon-scoop.jpg" alt="Curd-like scoop of ghee on a wooden spoon" data-step="2" loading="lazy" />
+          <img src="assets/swing-top-jars.jpg" alt="Handcrafted jars of bilona ghee" data-step="3" loading="lazy" />
+          <img src="assets/burlap-jar.jpg" alt="Ghee jar on rustic wood by wood-fire warmth" data-step="4" loading="lazy" />
+          <img src="assets/hero-pasture-jar.jpg" alt="Finished jar of organic cow ghee" data-step="5" class="active" loading="lazy" />
+        </div>
+        <div class="story-copy">
+          <p class="eyebrow">The Kridhav ritual</p>
+          <h2 class="section-title" id="storyTitle">From Pasture to Jar</h2>
+          <p class="section-lead">Six quiet steps. No shortcuts. The same rhythm our dairies have trusted for generations — now bottled for your table.</p>
+          <div class="story-steps" id="storySteps" role="list">
+            <div class="story-step active" data-step="0" role="listitem"><strong>Grass-fed cows</strong><p>Open pastures. Desi breeds. Milk that tastes of the land.</p></div>
+            <div class="story-step" data-step="1" role="listitem"><strong>Fresh A2 milk</strong><p>Collected cool, within hours — never reconstituted.</p></div>
+            <div class="story-step" data-step="2" role="listitem"><strong>Set into curd</strong><p>Overnight culture. The bilona journey begins here.</p></div>
+            <div class="story-step" data-step="3" role="listitem"><strong>Hand-churned bilona</strong><p>Wooden churn. Slow rhythm. Butter that earns its gold.</p></div>
+            <div class="story-step" data-step="4" role="listitem"><strong>Slow-simmered on wood fire</strong><p>Patience turns makkhan into liquid sunlight.</p></div>
+            <div class="story-step" data-step="5" role="listitem"><strong>Golden ghee</strong><p>Poured into glass. Sealed. Ready for your kitchen.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PRODUCTS -->
+    <section class="section section-cream" id="shop" aria-labelledby="shopTitle">
+      <div class="section-head">
+        <p class="eyebrow">The collection</p>
+        <h2 class="section-title" id="shopTitle">Choose your gold</h2>
+        <p class="section-lead">Three signatures. Three sizes. Every jar batch-dated and filled by hand.</p>
+      </div>
+      <div class="products-grid" id="productsGrid"></div>
+    </section>
+
+    <!-- PURITY -->
+    <section class="section section-soft" id="purity" aria-labelledby="purityTitle">
+      <div class="section-head">
+        <p class="eyebrow">Transparency</p>
+        <h2 class="section-title" id="purityTitle">Purity Proof</h2>
+        <p class="section-lead">Numbers you can verify. No invented licenses. No miracle claims — just honest process.</p>
+      </div>
+      <div class="purity-grid">
+        <div class="counters">
+          <div class="counter"><div class="num" data-count="48">0</div><div class="label">Hours from milk to jar</div></div>
+          <div class="counter"><div class="num" data-count="100">0</div><div class="label">% glass packaging</div></div>
+          <div class="counter"><div class="num" data-count="6">0</div><div class="label">Steps in bilona ritual</div></div>
+          <div class="counter"><div class="num" data-count="0">0</div><div class="label">Preservatives added</div></div>
+        </div>
+        <article class="lab-card">
+          <h3>Lab & compliance card</h3>
+          <div class="lab-row"><span>Product</span><span>A2 Desi Cow Ghee (Bilona)</span></div>
+          <div class="lab-row"><span>FSSAI License</span><span>[FSSAI License No. – add yours]</span></div>
+          <div class="lab-row"><span>Batch testing</span><span>[Lab report link]</span></div>
+          <div class="lab-row"><span>Moisture</span><span>Within FSSAI limits*</span></div>
+          <div class="lab-row"><span>RM / BR value</span><span>[Insert latest lab values]</span></div>
+          <p class="lab-note">*Placeholder values for demo. Replace with your certified lab results. Kridhav makes no medical or therapeutic claims.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- GOLDEN TEST -->
+    <section class="section section-cream" id="golden-test" aria-labelledby="testTitle">
+      <div class="section-head">
+        <p class="eyebrow">Learn the difference</p>
+        <h2 class="section-title" id="testTitle">The Golden Test</h2>
+        <p class="section-lead">Drag the slider. See how pure bilona ghee differs from adulterated fats — by look, melt, and aroma cues. Educational only.</p>
+      </div>
+      <div class="test-widget">
+        <div class="test-visual" id="testVisual">
+          <img class="pure" src="assets/texture-closeup.jpg" alt="Granular texture of pure bilona ghee" />
+          <img class="adulterated" src="assets/lifestyle-kitchen.jpg" alt="Smoother looking fat for comparison" id="adulteratedImg" />
+        </div>
+        <div class="test-cues">
+          <div class="slider-wrap">
+            <label for="puritySlider"><span>Pure ghee</span><span>Adulterated</span></label>
+            <input type="range" id="puritySlider" min="0" max="100" value="0" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" aria-label="Compare pure ghee versus adulterated" />
+          </div>
+          <div class="cue"><strong>Granularity (danedaar)</strong><p id="cueGrain">Fine, even crystals that catch the light — a bilona hallmark.</p></div>
+          <div class="cue"><strong>Aroma</strong><p id="cueAroma">Warm, nutty, faintly caramel — never greasy or chemical.</p></div>
+          <div class="cue"><strong>Melt</strong><p id="cueMelt">Softens cleanly at room warmth; leaves a clear golden pool.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- GIFTING -->
+    <section class="section section-soft" id="gifting" aria-labelledby="giftTitle">
+      <div class="section-head">
+        <p class="eyebrow">Hampers</p>
+        <h2 class="section-title" id="giftTitle">Build a Diwali hamper</h2>
+        <p class="section-lead">Pick jar sizes and a box style. Watch the summary update live — ready for weddings, corporate desks, or festival doors.</p>
+      </div>
+      <div class="gift-builder">
+        <div class="gift-options">
+          <div class="option-group">
+            <h4>Jar selection</h4>
+            <div class="chip-row" id="giftJars" role="group" aria-label="Jar sizes"></div>
+          </div>
+          <div class="option-group">
+            <h4>Box style</h4>
+            <div class="chip-row" id="giftBoxes" role="group" aria-label="Box styles">
+              <button type="button" class="chip active" data-box="Heritage Wood" data-price="499">Heritage Wood · ₹499</button>
+              <button type="button" class="chip" data-box="Festive Gold Sleeve" data-price="349">Festive Gold Sleeve · ₹349</button>
+              <button type="button" class="chip" data-box="Corporate Linen" data-price="599">Corporate Linen · ₹599</button>
+            </div>
+          </div>
+          <div class="option-group">
+            <h4>Occasion card</h4>
+            <div class="chip-row" id="giftCards">
+              <button type="button" class="chip active" data-card="Diwali">Diwali</button>
+              <button type="button" class="chip" data-card="Wedding">Wedding</button>
+              <button type="button" class="chip" data-card="Corporate">Corporate</button>
+            </div>
+          </div>
+        </div>
+        <aside class="gift-summary" aria-live="polite">
+          <h3>Your hamper</h3>
+          <div class="gift-preview"><img src="assets/swing-top-jars.jpg" alt="Gift-ready ghee jars" /></div>
+          <div class="line"><span id="sumJars">—</span><span id="sumJarsPrice">₹0</span></div>
+          <div class="line"><span id="sumBox">Heritage Wood</span><span id="sumBoxPrice">₹499</span></div>
+          <div class="line"><span>Card</span><span id="sumCard">Diwali</span></div>
+          <div class="gift-total"><span>Total</span><span id="sumTotal">₹499</span></div>
+          <button type="button" class="btn btn-gold" style="width:100%;margin-top:1.25rem" id="addHamper">Add hamper to cart</button>
+        </aside>
+      </div>
+    </section>
+
+    <!-- RECIPES -->
+    <section class="section section-cream" id="recipes" aria-labelledby="recipesTitle">
+      <div class="section-head">
+        <p class="eyebrow">In the kitchen</p>
+        <h2 class="section-title" id="recipesTitle">Where ghee belongs</h2>
+        <p class="section-lead">Five everyday rituals — elevated with a spoon of gold.</p>
+      </div>
+      <div class="recipe-rail" tabindex="0" aria-label="Recipe cards, scroll horizontally">
+        <article class="recipe-card">
+          <img src="assets/spoon-scoop.jpg" alt="" loading="lazy" />
+          <div class="recipe-meta"><h3>Dal tadka</h3><p>Finish with a hiss of cumin in molten ghee.</p></div>
+        </article>
+        <article class="recipe-card">
+          <img src="assets/texture-closeup.jpg" alt="" loading="lazy" />
+          <div class="recipe-meta"><h3>Halwa</h3><p>Slow-roast sooji until it smells like festivals.</p></div>
+        </article>
+        <article class="recipe-card">
+          <img src="assets/burlap-jar.jpg" alt="" loading="lazy" />
+          <div class="recipe-meta"><h3>Parathas</h3><p>Layer, fold, kiss the tawa with gold.</p></div>
+        </article>
+        <article class="recipe-card">
+          <img src="assets/lifestyle-kitchen.jpg" alt="" loading="lazy" />
+          <div class="recipe-meta"><h3>Khichdi</h3><p>Comfort in a bowl — drizzle at the end.</p></div>
+        </article>
+        <article class="recipe-card">
+          <img src="assets/field-jar.jpg" alt="" loading="lazy" />
+          <div class="recipe-meta"><h3>Laddoo</h3><p>Bind besan with warm ghee. Shape. Share.</p></div>
+        </article>
+      </div>
+    </section>
+
+    <!-- SUBSCRIPTION -->
+    <section class="section section-cream" aria-labelledby="subTitle">
+      <div class="sub-banner">
+        <div>
+          <p class="eyebrow">Subscribe</p>
+          <h2 id="subTitle">Ghee on repeat — save 10%</h2>
+          <p style="opacity:0.75;max-width:40ch">Never run out mid-tadka. Choose your jar, set a rhythm, pause anytime. Demo pricing only.</p>
+          <form class="sub-form" id="subForm">
+            <label class="sr-only" for="subProduct">Product</label>
+            <select id="subProduct" required>
+              <option value="a2-500">A2 Desi Cow · 500 ml</option>
+              <option value="a2-1l">A2 Desi Cow · 1 L</option>
+              <option value="buffalo-500">Buffalo Ghee · 500 ml</option>
+              <option value="cultured-500">Organic Cultured · 500 ml</option>
+            </select>
+            <label class="sr-only" for="subFreq">Frequency</label>
+            <select id="subFreq">
+              <option value="30">Every 30 days</option>
+              <option value="45">Every 45 days</option>
+              <option value="60">Every 60 days</option>
+            </select>
+            <button type="submit" class="btn btn-gold">Start subscription</button>
+          </form>
+          <p class="form-msg" id="subMsg" role="status"></p>
+        </div>
+        <div style="position:relative;z-index:1;border-radius:16px;overflow:hidden;aspect-ratio:4/3">
+          <img src="assets/hero-pasture-jar.jpg" alt="Kridhav ghee jar ready for subscription delivery" loading="lazy" style="width:100%;height:100%;object-fit:cover" />
+        </div>
+      </div>
+    </section>
+
+    <!-- TESTIMONIALS -->
+    <section class="section section-soft" aria-labelledby="reviewsTitle">
+      <div class="section-head">
+        <p class="eyebrow">From kitchens like yours</p>
+        <h2 class="section-title" id="reviewsTitle">Words, not marketing</h2>
+      </div>
+      <div class="marquee-wrap">
+        <div class="marquee-track" id="marqueeTrack">
+          <!-- duplicated in JS for seamless loop -->
+        </div>
+      </div>
+    </section>
+
+    <!-- FAQ -->
+    <section class="section section-cream" id="faq" aria-labelledby="faqTitle">
+      <div class="section-head">
+        <p class="eyebrow">Good questions</p>
+        <h2 class="section-title" id="faqTitle">FAQ</h2>
+      </div>
+      <div class="faq-list" id="faqList"></div>
+    </section>
+
+    <!-- WHOLESALE -->
+    <section class="section section-soft" id="wholesale" aria-labelledby="wholesaleTitle">
+      <div class="wholesale-grid">
+        <div>
+          <p class="eyebrow">B2B</p>
+          <h2 class="section-title" id="wholesaleTitle">Wholesale & bulk</h2>
+          <p class="section-lead">Restaurants, sweet shops, retailers — tell us your monthly need. We reply within one business day (demo form).</p>
+          <ul style="display:grid;gap:0.6rem;color:var(--muted);font-size:0.95rem;margin-top:1rem">
+            <li>— Consistent bilona supply</li>
+            <li>— Custom jar branding available</li>
+            <li>— Pan-India dispatch partners</li>
+          </ul>
+        </div>
+        <form class="form-grid" id="wholesaleForm">
+          <label>Business name<input type="text" name="business" required placeholder="Your kitchen / shop" /></label>
+          <label>Type
+            <select name="type" required>
+              <option value="">Select</option>
+              <option>Restaurant</option>
+              <option>Sweet shop</option>
+              <option>Retailer</option>
+              <option>Hotel / cloud kitchen</option>
+              <option>Other</option>
+            </select>
+          </label>
+          <label>Phone / WhatsApp<input type="tel" name="phone" required placeholder="+91" /></label>
+          <label>Monthly volume (approx.)
+            <select name="volume">
+              <option>Under 20 L</option>
+              <option>20–50 L</option>
+              <option>50–200 L</option>
+              <option>200 L+</option>
+            </select>
+          </label>
+          <label>Message<textarea name="message" placeholder="Tell us about your use case"></textarea></label>
+          <button type="submit" class="btn btn-ink">Send enquiry</button>
+          <p class="form-msg" id="wholesaleMsg" role="status"></p>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">Kridhav <em>गhee</em></div>
+        <p>Slow-churned. Pure gold. Crafted in India for kitchens that care about what goes in the kadhai.</p>
+        <div class="pay-icons" aria-label="Payment methods">
+          <span>UPI</span><span>Cards</span><span>NetBanking</span><span>COD</span>
+        </div>
+      </div>
+      <div>
+        <h4>Shop</h4>
+        <ul>
+          <li><a href="#shop">A2 Desi Cow</a></li>
+          <li><a href="#shop">Buffalo Ghee</a></li>
+          <li><a href="#gifting">Gift Hampers</a></li>
+          <li><a href="#shop">Organic Cultured</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://wa.me/919999999999" target="_blank" rel="noopener">WhatsApp · +91 99999 99999</a></li>
+          <li><a href="#" aria-label="Instagram placeholder">Instagram · @kridhav</a></li>
+          <li><a href="mailto:hello@kridhav.demo">hello@kridhav.demo</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Visit</h4>
+        <ul>
+          <li><a href="#">[Registered Address – add yours]</a></li>
+          <li><a href="#">[Warehouse / Dispatch – add yours]</a></li>
+          <li><a href="#purity">FSSAI · [add yours]</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Kridhav Demo · For pitch use only</span>
+      <span>Shuddh. Sunehri. Sachha.</span>
+    </div>
+  </footer>
+
+  <!-- Cart -->
+  <div class="cart-overlay" id="cartOverlay" hidden></div>
+  <aside class="cart-drawer" id="cartDrawer" aria-label="Shopping cart" aria-hidden="true">
+    <div class="cart-head">
+      <h2>Your cart</h2>
+      <button type="button" class="icon-btn" id="cartClose" aria-label="Close cart" style="border-color:var(--line);color:var(--ink)">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M6 6l12 12M18 6 6 18"/></svg>
+      </button>
+    </div>
+    <div class="cart-body" id="cartBody"></div>
+    <div class="cart-foot">
+      <div class="ship-note" id="shipNote">Add ₹999 more for free shipping</div>
+      <div class="ship-bar" aria-hidden="true"><span id="shipFill"></span></div>
+      <div class="subtotal-row"><span>Subtotal</span><span id="cartSubtotal">₹0</span></div>
+      <div class="pincode-row">
+        <label class="sr-only" for="pincode">Pincode</label>
+        <input type="text" id="pincode" inputmode="numeric" maxlength="6" placeholder="Check pincode" />
+        <button type="button" class="btn btn-outline" id="checkPin" style="padding:0.7rem 1rem">Check</button>
+      </div>
+      <p class="pincode-msg" id="pinMsg" role="status"></p>
+      <button type="button" class="btn btn-ink" id="checkoutDemo">Checkout (demo)</button>
+      <a class="btn btn-gold" id="whatsappOrder" href="#" target="_blank" rel="noopener">Order on WhatsApp</a>
+    </div>
+  </aside>
+
+  <!-- Mobile bar -->
+  <div class="mobile-bar" role="region" aria-label="Quick actions">
+    <button type="button" class="btn btn-gold" id="mobileAdd">Add to cart</button>
+    <a class="btn btn-ghost" id="mobileWa" href="https://wa.me/919999999999?text=Hi%20Kridhav%2C%20I%27d%20like%20to%20order." target="_blank" rel="noopener" style="border-color:rgba(251,244,228,0.35);color:var(--cream)">WhatsApp</a>
+  </div>
+
+  <script>
+    /* ========== PRODUCT DATA ========== */
+    const PRODUCTS = [
+      {
+        id: "a2-desi",
+        name: "A2 Desi Cow Ghee",
+        tagline: "Bilona method · Grass-fed",
+        image: "assets/field-jar.jpg",
+        sizes: [
+          { size: "250 ml", price: 449 },
+          { size: "500 ml", price: 799 },
+          { size: "1 L", price: 1499 }
+        ]
+      },
+      {
+        id: "buffalo",
+        name: "Buffalo Ghee",
+        tagline: "Rich · Ideal for sweets",
+        image: "assets/burlap-jar.jpg",
+        sizes: [
+          { size: "250 ml", price: 399 },
+          { size: "500 ml", price: 729 },
+          { size: "1 L", price: 1349 }
+        ]
+      },
+      {
+        id: "cultured",
+        name: "Organic Cultured Ghee",
+        tagline: "Cultured cream · Delicate aroma",
+        image: "assets/spoon-scoop.jpg",
+        sizes: [
+          { size: "250 ml", price: 499 },
+          { size: "500 ml", price: 899 },
+          { size: "1 L", price: 1699 }
+        ]
+      }
+    ];
+
+    const GIFT_JAR_OPTIONS = [
+      { id: "g-a2-500", label: "A2 · 500 ml", price: 799 },
+      { id: "g-a2-1l", label: "A2 · 1 L", price: 1499 },
+      { id: "g-buff-500", label: "Buffalo · 500 ml", price: 729 },
+      { id: "g-pair", label: "Duo · A2 + Buffalo 500 ml", price: 1499 }
+    ];
+
+    const REVIEWS = [
+      { name: "Ananya Mehra, Pune", text: "The aroma when it hits the tadka — that alone sold my entire family." },
+      { name: "Rohit Deshpande, Indore", text: "We switched for the glass jars. Stayed for the danedaar texture." },
+      { name: "Sana Qureshi, Hyderabad", text: "Sent the Diwali hamper to clients. Three asked for the brand name." },
+      { name: "Vikram Iyer, Chennai", text: "Feels like the ghee my grandmother strained on the chulha — cleaner packaging." },
+      { name: "Neha Kapoor, Delhi", text: "Subscription means I stop rationing the last spoon before the next order." }
+    ];
+
+    const FAQS = [
+      { q: "What is bilona ghee?", a: "Curd is set from milk, hand-churned into butter (makkhan), then slow-simmered into ghee. Longer process, fuller aroma — the Kridhav way." },
+      { q: "How should I store it?", a: "Cool, dry cupboard away from sunlight. No refrigeration needed in most Indian climates. Always use a dry spoon." },
+      { q: "Do you ship pan-India?", a: "Yes — demo checker accepts most 6-digit pincodes. Free shipping above ₹999." },
+      { q: "Is this medical or Ayurvedic advice?", a: "No. Kridhav is a food brand. We do not make health, therapeutic, or medicinal claims." },
+      { q: "Can I white-label for my brand?", a: "This page is a manufacturer pitch demo. Use the wholesale form — custom branding is available on request." }
+    ];
+
+    /* ========== STATE ========== */
+    let cart = []; // { id, name, size, price, qty, image }
+    let selectedGiftJar = GIFT_JAR_OPTIONS[0];
+    let selectedBox = { name: "Heritage Wood", price: 499 };
+    let selectedCard = "Diwali";
+    let productSelections = {};
+
+    const FREE_SHIP = 999;
+    const WA_NUMBER = "919999999999";
+    const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+    /* ========== UTILS ========== */
+    const formatINR = (n) => "₹" + Math.round(n).toLocaleString("en-IN");
+    const cartQty = () => cart.reduce((s, i) => s + i.qty, 0);
+    const cartTotal = () => cart.reduce((s, i) => s + i.price * i.qty, 0);
+
+    function jarSVG() {
+      const gid = "jg" + Math.random().toString(36).slice(2, 7);
+      return `<svg class="jar-svg" viewBox="0 0 120 160" aria-hidden="true">
+        <defs>
+          <linearGradient id="${gid}" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#F8E08A"/><stop offset="1" stop-color="#C98A12"/></linearGradient>
+        </defs>
+        <rect x="35" y="12" width="50" height="14" rx="3" fill="#C98A12"/>
+        <rect x="38" y="8" width="44" height="6" rx="2" fill="#E8B13A"/>
+        <path d="M28 32 h64 v10 H28z" fill="rgba(251,244,228,0.25)"/>
+        <path d="M30 42 q0 100 30 110 q30-10 30-110z" fill="rgba(251,244,228,0.12)" stroke="rgba(251,244,228,0.4)" stroke-width="2"/>
+        <path d="M36 70 q0 70 24 78 q24-8 24-78z" fill="url(#${gid})" opacity="0.95"/>
+        <rect x="40" y="55" width="40" height="28" rx="2" fill="#FBF4E4" opacity="0.9"/>
+        <text x="60" y="72" text-anchor="middle" font-size="6" fill="#0F1A14" font-family="Georgia,serif">KRIDHAV</text>
+      </svg>`;
+    }
+
+    /* ========== RENDER PRODUCTS ========== */
+    function renderProducts() {
+      const grid = document.getElementById("productsGrid");
+      grid.innerHTML = PRODUCTS.map((p, idx) => {
+        productSelections[p.id] = 0;
+        const s = p.sizes[0];
+        return `
+        <article class="product-card" data-product="${p.id}" data-tilt>
+          <div class="product-media">
+            <img src="${p.image}" alt="${p.name} in glass jar" loading="lazy" />
+          </div>
+          <h3>${p.name}</h3>
+          <p class="desc">${p.tagline}</p>
+          <div class="size-row" role="group" aria-label="Sizes for ${p.name}">
+            ${p.sizes.map((sz, i) => `
+              <button type="button" class="size-btn ${i === 0 ? "active" : ""}" data-size-idx="${i}">${sz.size}</button>
+            `).join("")}
+          </div>
+          <div class="price-row">
+            <div class="price" data-price>${formatINR(s.price)}<small>incl. demo GST</small></div>
+          </div>
+          <div class="product-actions">
+            <button type="button" class="btn btn-ink add-cart" data-id="${p.id}">Add to cart</button>
+            <button type="button" class="btn btn-outline buy-wa" data-id="${p.id}">WhatsApp</button>
+          </div>
+        </article>`;
+      }).join("");
+
+      grid.querySelectorAll(".product-card").forEach(card => {
+        const id = card.dataset.product;
+        card.querySelectorAll(".size-btn").forEach(btn => {
+          btn.addEventListener("click", () => {
+            card.querySelectorAll(".size-btn").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            const idx = +btn.dataset.sizeIdx;
+            productSelections[id] = idx;
+            const price = PRODUCTS.find(p => p.id === id).sizes[idx].price;
+            const priceEl = card.querySelector("[data-price]");
+            priceEl.style.opacity = "0";
+            priceEl.style.transform = "translateY(6px)";
+            setTimeout(() => {
+              priceEl.innerHTML = formatINR(price) + "<small>incl. demo GST</small>";
+              priceEl.style.transition = "opacity 0.3s, transform 0.3s";
+              priceEl.style.opacity = "1";
+              priceEl.style.transform = "translateY(0)";
+            }, 120);
+          });
+        });
+        card.querySelector(".add-cart").addEventListener("click", (e) => {
+          addProductToCart(id, e.currentTarget);
+        });
+        card.querySelector(".buy-wa").addEventListener("click", () => {
+          const p = PRODUCTS.find(x => x.id === id);
+          const sz = p.sizes[productSelections[id]];
+          const msg = encodeURIComponent(`Hi Kridhav, I'd like to order:\n• ${p.name} — ${sz.size} (${formatINR(sz.price)})\nPlease confirm availability.`);
+          window.open(`https://wa.me/${WA_NUMBER}?text=${msg}`, "_blank");
+        });
+      });
+
+      initTilt();
+    }
+
+    /* ========== CART ========== */
+    function addProductToCart(productId, btnEl) {
+      const p = PRODUCTS.find(x => x.id === productId);
+      const sz = p.sizes[productSelections[productId]];
+      const key = `${p.id}-${sz.size}`;
+      const existing = cart.find(i => i.key === key);
+      if (existing) existing.qty += 1;
+      else cart.push({ key, id: p.id, name: p.name, size: sz.size, price: sz.price, qty: 1, image: p.image });
+      updateCartUI();
+      flyToCart(btnEl);
+      openCart();
+    }
+
+    function updateCartUI() {
+      const count = cartQty();
+      const badge = document.getElementById("cartCount");
+      badge.textContent = count;
+      badge.classList.toggle("is-on", count > 0);
+
+      const body = document.getElementById("cartBody");
+      if (!cart.length) {
+        body.innerHTML = `<div class="cart-empty"><p>Your cart is waiting for gold.</p></div>`;
+      } else {
+        body.innerHTML = cart.map((item, i) => `
+          <div class="cart-item">
+            <div class="cart-thumb"><img src="${item.image}" alt="" /></div>
+            <div>
+              <h4>${item.name}</h4>
+              <div class="meta">${item.size}</div>
+              <div class="qty-ctrl">
+                <button type="button" aria-label="Decrease" data-qty="${i}" data-d="-1">−</button>
+                <span>${item.qty}</span>
+                <button type="button" aria-label="Increase" data-qty="${i}" data-d="1">+</button>
+              </div>
+            </div>
+            <div class="cart-item-price">${formatINR(item.price * item.qty)}</div>
+          </div>
+        `).join("");
+        body.querySelectorAll("[data-qty]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            const i = +btn.dataset.qty;
+            cart[i].qty += +btn.dataset.d;
+            if (cart[i].qty <= 0) cart.splice(i, 1);
+            updateCartUI();
+          });
+        });
+      }
+
+      const total = cartTotal();
+      document.getElementById("cartSubtotal").textContent = formatINR(total);
+      const remain = Math.max(0, FREE_SHIP - total);
+      const pct = Math.min(100, (total / FREE_SHIP) * 100);
+      document.getElementById("shipFill").style.width = pct + "%";
+      document.getElementById("shipNote").textContent = remain > 0
+        ? `Add ${formatINR(remain)} more for free shipping`
+        : "You've unlocked free shipping";
+
+      const lines = cart.map(i => `• ${i.name} (${i.size}) × ${i.qty} — ${formatINR(i.price * i.qty)}`).join("%0A");
+      const msg = cart.length
+        ? `Hi Kridhav,%0AI'd like to order:%0A${lines}%0A%0ASubtotal: ${formatINR(total)}`
+        : `Hi Kridhav, I'd like to place an order.`;
+      document.getElementById("whatsappOrder").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+      document.getElementById("mobileWa").href = `https://wa.me/${WA_NUMBER}?text=${msg}`;
+    }
+
+    function openCart() {
+      const drawer = document.getElementById("cartDrawer");
+      const overlay = document.getElementById("cartOverlay");
+      drawer.classList.add("open");
+      overlay.classList.add("open");
+      overlay.hidden = false;
+      drawer.setAttribute("aria-hidden", "false");
+      document.getElementById("cartToggle").setAttribute("aria-expanded", "true");
+      document.body.style.overflow = "hidden";
+    }
+    function closeCart() {
+      const drawer = document.getElementById("cartDrawer");
+      const overlay = document.getElementById("cartOverlay");
+      drawer.classList.remove("open");
+      overlay.classList.remove("open");
+      drawer.setAttribute("aria-hidden", "true");
+      document.getElementById("cartToggle").setAttribute("aria-expanded", "false");
+      document.body.style.overflow = "";
+      setTimeout(() => { overlay.hidden = true; }, 350);
+    }
+
+    function flyToCart(fromEl) {
+      if (reduceMotion || !fromEl) return;
+      const cartBtn = document.getElementById("cartToggle");
+      const a = fromEl.getBoundingClientRect();
+      const b = cartBtn.getBoundingClientRect();
+      const el = document.createElement("div");
+      el.className = "fly-jar";
+      el.innerHTML = jarSVG();
+      el.style.left = a.left + a.width / 2 - 24 + "px";
+      el.style.top = a.top + "px";
+      document.body.appendChild(el);
+      requestAnimationFrame(() => {
+        el.style.transform = `translate(${b.left - a.left}px, ${b.top - a.top}px) scale(0.3)`;
+        el.style.opacity = "0";
+      });
+      setTimeout(() => el.remove(), 750);
+    }
+
+    /* ========== GIFT BUILDER ========== */
+    function renderGiftJars() {
+      const wrap = document.getElementById("giftJars");
+      wrap.innerHTML = GIFT_JAR_OPTIONS.map((o, i) =>
+        `<button type="button" class="chip ${i === 0 ? "active" : ""}" data-gift="${o.id}">${o.label} · ${formatINR(o.price)}</button>`
+      ).join("");
+      wrap.querySelectorAll(".chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          wrap.querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          selectedGiftJar = GIFT_JAR_OPTIONS.find(o => o.id === chip.dataset.gift);
+          updateGiftSummary();
+        });
+      });
+    }
+    function updateGiftSummary() {
+      document.getElementById("sumJars").textContent = selectedGiftJar.label;
+      document.getElementById("sumJarsPrice").textContent = formatINR(selectedGiftJar.price);
+      document.getElementById("sumBox").textContent = selectedBox.name;
+      document.getElementById("sumBoxPrice").textContent = formatINR(selectedBox.price);
+      document.getElementById("sumCard").textContent = selectedCard;
+      document.getElementById("sumTotal").textContent = formatINR(selectedGiftJar.price + selectedBox.price);
+    }
+
+    /* ========== GOLDEN TEST ========== */
+    function initGoldenTest() {
+      const slider = document.getElementById("puritySlider");
+      const adulterated = document.getElementById("adulteratedImg");
+      const cues = {
+        grain: [
+          "Fine, even crystals that catch the light — a bilona hallmark.",
+          "Mixed grain — some grit, some oddly smooth patches.",
+          "Waxy-smooth surface. Little to no natural granulation."
+        ],
+        aroma: [
+          "Warm, nutty, faintly caramel — never greasy or chemical.",
+          "Milder scent; a faint oiliness creeps in.",
+          "Flat or vaguely chemical — missing the kitchen warmth of pure ghee."
+        ],
+        melt: [
+          "Softens cleanly at room warmth; leaves a clear golden pool.",
+          "Melts unevenly; pool looks slightly cloudy.",
+          "Stays oddly firm or turns cloudy — visual cue to be cautious."
+        ]
+      };
+      slider.addEventListener("input", () => {
+        const v = +slider.value;
+        slider.setAttribute("aria-valuenow", v);
+        adulterated.style.opacity = String(v / 100);
+        const tier = v < 33 ? 0 : v < 66 ? 1 : 2;
+        document.getElementById("cueGrain").textContent = cues.grain[tier];
+        document.getElementById("cueAroma").textContent = cues.aroma[tier];
+        document.getElementById("cueMelt").textContent = cues.melt[tier];
+      });
+    }
+
+    /* ========== FAQ / REVIEWS ========== */
+    function renderFaqs() {
+      const list = document.getElementById("faqList");
+      list.innerHTML = FAQS.map((f, i) => `
+        <div class="faq-item ${i === 0 ? "open" : ""}">
+          <button type="button" class="faq-q" aria-expanded="${i === 0}">
+            ${f.q}
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 5v14M5 12h14"/></svg>
+          </button>
+          <div class="faq-a"><p>${f.a}</p></div>
+        </div>
+      `).join("");
+      list.querySelectorAll(".faq-item").forEach(item => {
+        item.querySelector(".faq-q").addEventListener("click", () => {
+          const open = item.classList.contains("open");
+          list.querySelectorAll(".faq-item").forEach(x => {
+            x.classList.remove("open");
+            x.querySelector(".faq-q").setAttribute("aria-expanded", "false");
+          });
+          if (!open) {
+            item.classList.add("open");
+            item.querySelector(".faq-q").setAttribute("aria-expanded", "true");
+          }
+        });
+      });
+    }
+
+    function renderReviews() {
+      const track = document.getElementById("marqueeTrack");
+      const html = REVIEWS.map(r => `
+        <blockquote class="review-card">
+          <div class="stars" aria-label="5 stars">★★★★★</div>
+          <p>“${r.text}”</p>
+          <cite>— ${r.name}</cite>
+        </blockquote>
+      `).join("");
+      track.innerHTML = html + html;
+      if (reduceMotion) track.style.animation = "none";
+    }
+
+    /* ========== TILT ========== */
+    function initTilt() {
+      if (reduceMotion || window.matchMedia("(pointer: coarse)").matches) return;
+      document.querySelectorAll("[data-tilt]").forEach(card => {
+        card.addEventListener("mousemove", (e) => {
+          const r = card.getBoundingClientRect();
+          const x = (e.clientX - r.left) / r.width - 0.5;
+          const y = (e.clientY - r.top) / r.height - 0.5;
+          card.style.transform = `perspective(900px) rotateY(${x * 10}deg) rotateX(${-y * 10}deg) translateY(-4px)`;
+        });
+        card.addEventListener("mouseleave", () => {
+          card.style.transform = "perspective(900px) rotateY(0) rotateX(0)";
+        });
+      });
+    }
+
+    /* ========== PARTICLES & MAGNETIC ========== */
+    function initParticles() {
+      const wrap = document.getElementById("particles");
+      if (reduceMotion) return;
+      for (let i = 0; i < 28; i++) {
+        const p = document.createElement("span");
+        p.className = "particle";
+        p.style.left = Math.random() * 100 + "%";
+        p.style.animationDuration = 8 + Math.random() * 14 + "s";
+        p.style.animationDelay = Math.random() * 10 + "s";
+        p.style.width = p.style.height = 2 + Math.random() * 3 + "px";
+        wrap.appendChild(p);
+      }
+    }
+
+    function initMagnetic() {
+      const wrap = document.querySelector(".magnetic");
+      const btn = document.getElementById("magneticCta");
+      if (!wrap || reduceMotion || window.matchMedia("(pointer: coarse)").matches) return;
+      wrap.addEventListener("mousemove", (e) => {
+        const r = wrap.getBoundingClientRect();
+        const x = e.clientX - r.left - r.width / 2;
+        const y = e.clientY - r.top - r.height / 2;
+        btn.style.transform = `translate(${x * 0.25}px, ${y * 0.25}px)`;
+      });
+      wrap.addEventListener("mouseleave", () => { btn.style.transform = ""; });
+    }
+
+    /* ========== COUNTERS ========== */
+    function initCounters() {
+      const els = document.querySelectorAll(".counter .num");
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (!entry.isIntersecting) return;
+          const el = entry.target;
+          const target = +el.dataset.count;
+          if (reduceMotion) { el.textContent = target; io.unobserve(el); return; }
+          const start = performance.now();
+          const dur = 1400;
+          const tick = (t) => {
+            const p = Math.min(1, (t - start) / dur);
+            const eased = 1 - Math.pow(1 - p, 3);
+            el.textContent = Math.round(target * eased);
+            if (p < 1) requestAnimationFrame(tick);
+          };
+          requestAnimationFrame(tick);
+          io.unobserve(el);
+        });
+      }, { threshold: 0.4 });
+      els.forEach(el => io.observe(el));
+    }
+
+    /* ========== GSAP ========== */
+    function initGSAP() {
+      if (typeof gsap === "undefined" || typeof ScrollTrigger === "undefined") return;
+      gsap.registerPlugin(ScrollTrigger);
+
+      // Hero words
+      if (!reduceMotion) {
+        gsap.to(".hero-headline .word", {
+          opacity: 1, y: 0, duration: 0.9, stagger: 0.18, ease: "power3.out", delay: 0.25
+        });
+        gsap.to("#pourStream", {
+          strokeDashoffset: 0, duration: 2.2, ease: "power2.inOut"
+        });
+        gsap.to("#jarFill", {
+          attr: { y: 430, height: 98 }, duration: 2, delay: 1.2, ease: "power2.out"
+        });
+      } else {
+        document.querySelectorAll(".hero-headline .word").forEach(w => { w.style.opacity = 1; w.style.transform = "none"; });
+        const stream = document.getElementById("pourStream");
+        const fill = document.getElementById("jarFill");
+        if (stream) stream.style.strokeDashoffset = 0;
+        if (fill) { fill.setAttribute("y", "430"); fill.setAttribute("height", "98"); }
+      }
+
+      // Story scroll
+      const steps = document.querySelectorAll(".story-step");
+      const imgs = document.querySelectorAll("#storyVisual img");
+      const svgs = document.querySelectorAll(".story-step-svg");
+      const stage = document.getElementById("storySvgStage");
+
+      function setStoryStep(n) {
+        steps.forEach(s => s.classList.toggle("active", +s.dataset.step === n));
+        imgs.forEach(img => img.classList.toggle("active", +img.dataset.step === n));
+        svgs.forEach(svg => svg.classList.toggle("active", +svg.dataset.step === n));
+        if (n >= 0 && imgs.length) stage.classList.add("hide");
+      }
+      // show photo by default for step visuals — hide SVG stage when images take over
+      stage.style.opacity = "0";
+      stage.style.pointerEvents = "none";
+
+      if (!reduceMotion) {
+        ScrollTrigger.create({
+          trigger: "#storyPin",
+          start: "top top",
+          end: "+=2800",
+          pin: true,
+          scrub: 0.6,
+          onUpdate: (self) => {
+            const n = Math.min(5, Math.floor(self.progress * 6));
+            setStoryStep(n);
+          }
+        });
+      } else {
+        setStoryStep(5);
+      }
+
+      // Nav glass
+      ScrollTrigger.create({
+        start: 80,
+        onUpdate: (self) => {
+          document.getElementById("nav").classList.toggle("scrolled", self.scroll() > 60);
+        }
+      });
+    }
+
+    /* ========== PINCODE ========== */
+    function checkPincode() {
+      const pin = document.getElementById("pincode").value.trim();
+      const msg = document.getElementById("pinMsg");
+      if (!/^\d{6}$/.test(pin)) {
+        msg.textContent = "Enter a valid 6-digit pincode";
+        msg.className = "pincode-msg bad";
+        return;
+      }
+      // Demo logic: reject 000000 / 111111 pattern-ish
+      const serviceable = !(pin.startsWith("000") || pin === "111111");
+      if (serviceable) {
+        msg.textContent = `Delivering to ${pin} in 3–5 days (demo)`;
+        msg.className = "pincode-msg ok";
+      } else {
+        msg.textContent = "Sorry — this pincode isn't in our demo coverage";
+        msg.className = "pincode-msg bad";
+      }
+    }
+
+    /* ========== INIT ========== */
+    document.addEventListener("DOMContentLoaded", () => {
+      renderProducts();
+      renderGiftJars();
+      updateGiftSummary();
+      renderFaqs();
+      renderReviews();
+      initGoldenTest();
+      initParticles();
+      initMagnetic();
+      initCounters();
+      updateCartUI();
+
+      document.getElementById("cartToggle").addEventListener("click", openCart);
+      document.getElementById("cartClose").addEventListener("click", closeCart);
+      document.getElementById("cartOverlay").addEventListener("click", closeCart);
+      document.getElementById("checkPin").addEventListener("click", checkPincode);
+      document.getElementById("pincode").addEventListener("keydown", (e) => { if (e.key === "Enter") checkPincode(); });
+
+      document.getElementById("checkoutDemo").addEventListener("click", () => {
+        alert(cart.length ? "Demo checkout — wire your payment gateway here." : "Add something golden first.");
+      });
+
+      // Gift chips
+      document.getElementById("giftBoxes").querySelectorAll(".chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          document.getElementById("giftBoxes").querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          selectedBox = { name: chip.dataset.box, price: +chip.dataset.price };
+          updateGiftSummary();
+        });
+      });
+      document.getElementById("giftCards").querySelectorAll(".chip").forEach(chip => {
+        chip.addEventListener("click", () => {
+          document.getElementById("giftCards").querySelectorAll(".chip").forEach(c => c.classList.remove("active"));
+          chip.classList.add("active");
+          selectedCard = chip.dataset.card;
+          updateGiftSummary();
+        });
+      });
+      document.getElementById("addHamper").addEventListener("click", (e) => {
+        const price = selectedGiftJar.price + selectedBox.price;
+        const key = `hamper-${selectedGiftJar.id}-${selectedBox.name}-${selectedCard}`;
+        const existing = cart.find(i => i.key === key);
+        if (existing) existing.qty += 1;
+        else cart.push({
+          key, id: "hamper", name: `Hamper · ${selectedCard}`,
+          size: `${selectedGiftJar.label} + ${selectedBox.name}`,
+          price, qty: 1, image: "assets/swing-top-jars.jpg"
+        });
+        updateCartUI();
+        flyToCart(e.currentTarget);
+        openCart();
+      });
+
+      document.getElementById("subForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const msg = document.getElementById("subMsg");
+        msg.textContent = "Subscription preference saved (demo). Connect your billing later.";
+        msg.classList.add("show");
+      });
+      document.getElementById("wholesaleForm").addEventListener("submit", (e) => {
+        e.preventDefault();
+        const msg = document.getElementById("wholesaleMsg");
+        msg.textContent = "Enquiry received (demo). We'll be in touch within one business day.";
+        msg.classList.add("show");
+        e.target.reset();
+      });
+
+      // Mobile menu
+      const menu = document.getElementById("mobileMenu");
+      const menuBtn = document.getElementById("menuToggle");
+      menuBtn.addEventListener("click", () => {
+        const open = menu.classList.toggle("open");
+        menu.hidden = !open;
+        menuBtn.setAttribute("aria-expanded", String(open));
+      });
+      menu.querySelectorAll("a").forEach(a => a.addEventListener("click", () => {
+        menu.classList.remove("open");
+        menu.hidden = true;
+        menuBtn.setAttribute("aria-expanded", "false");
+      }));
+
+      document.getElementById("mobileAdd").addEventListener("click", () => {
+        const first = PRODUCTS[0];
+        productSelections[first.id] = productSelections[first.id] || 0;
+        addProductToCart(first.id, document.getElementById("mobileAdd"));
+      });
+
+      // Wait for GSAP (defer)
+      const tryGSAP = () => {
+        if (typeof gsap !== "undefined") initGSAP();
+        else setTimeout(tryGSAP, 50);
+      };
+      tryGSAP();
+
+      // Sticky nav fallback without ScrollTrigger
+      window.addEventListener("scroll", () => {
+        document.getElementById("nav").classList.toggle("scrolled", window.scrollY > 60);
+      }, { passive: true });
+    });
+  </script>
+</body>
+</html>
